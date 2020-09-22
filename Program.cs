@@ -7,6 +7,7 @@
  I am attempting to get a 3 on this assignment so I have exceeded 
  expectations by adding a personalized message for specific user input
  for the names :"Tom Brady", "Victor Hedman", and "Austin Meadows".
+ Keep in mind the names are case sensitive
  */
 
 using System;
@@ -49,9 +50,7 @@ namespace Samsock_TechnicalProject_3a
                 }
                 else
                 {
-                    Console.WriteLine("Hello " + input.ToString() + "!");
-                    Console.WriteLine("Press any key to exit the program...");
-                    Console.ReadKey(true);
+                    provide_name(input);
                 }
             }//END TRY
             catch
@@ -60,6 +59,13 @@ namespace Samsock_TechnicalProject_3a
                 Console.WriteLine("Press any key to exit and try again");
                 Console.ReadKey(true);
             }
+        } // END MAIN
+
+        static void provide_name(string input)
+        {
+            Console.WriteLine("Hello " + input.ToString() + "!");
+            Console.WriteLine("Press any key to exit the program...");
+            Console.ReadKey(true);
         }
     }
 }
