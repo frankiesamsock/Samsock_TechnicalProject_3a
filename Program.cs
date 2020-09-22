@@ -63,9 +63,20 @@ namespace Samsock_TechnicalProject_3a
 
         static void provide_name(string input)
         {
+            if (string.IsNullOrEmpty(input))
+            {
+             Console.WriteLine("You cannot have a null or emplty value.");
+             Console.WriteLine(" ");
+             Console.WriteLine("Press any key to exit the program and try again...");
+             Console.ReadKey(true);
+            }
+            else
+            {
             Console.WriteLine("Hello " + input.ToString() + "!");
             Console.WriteLine("Press any key to exit the program...");
             Console.ReadKey(true);
+            }
+                
         }
     }
 }
