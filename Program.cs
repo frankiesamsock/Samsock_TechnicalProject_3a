@@ -18,6 +18,7 @@ namespace Samsock_TechnicalProject_3a
     {
         static void Main(string[] args)
         {
+            //Ask user to enter their name into the console
             Console.WriteLine("Hello! Please enter your name.");
 
 
@@ -26,43 +27,58 @@ namespace Samsock_TechnicalProject_3a
                 //Gather information from user
                 string input = Console.ReadLine();
 
-
+                //Customized input response for name: "Tom Brady"
                 if (input == "Tom Brady")
                 {
+                    //Reads the name back to the user 
                     Console.WriteLine("Hello " + input.ToString() + "!");
+                    //Personalized response for this specific input
                     Console.WriteLine("Go Bucs!");
                     Console.WriteLine("Press any key to exit the program...");
+                    // Allows the user to press any key to exit
                     Console.ReadKey(true);
                 }
+                //Customized input response for the name: "Victor Hedman"
                 else if (input == "Victor Hedman")
                 {
+                    //Reads the name back to the user
                     Console.WriteLine("Hello " + input.ToString() + "!");
+                    //Personalized response for this specific input
                     Console.WriteLine("Go Bolts!");
                     Console.WriteLine("Press any key to exit the program...");
+                    // Allows the user to press any key to exit
                     Console.ReadKey(true);
                 }
+                //Customized input response for the name: "Austin Meadows"
                 else if (input == "Austin Meadows")
                 {
+                    //Reads the name back to the user
                     Console.WriteLine("Hello " + input.ToString() + "!");
+                    //Personalized response for this specific input
                     Console.WriteLine("Go Rays!");
                     Console.WriteLine("Press any key to exit the program...");
+                    // Allows the user to press any key to exit
                     Console.ReadKey(true);
                 }
                 else
                 {
+                    //Execute method to show the user's entered name 
                     provide_name(input);
                 }
             }//END TRY
             catch
             {
+                //Catch response
                 Console.WriteLine("A problem has occured, please try again...");
                 Console.WriteLine("Press any key to exit and try again");
                 Console.ReadKey(true);
             }
         } // END MAIN
 
+        //Method which displays the desired message 
         static void provide_name(string input)
         {
+            //IF statement to make sure the user inputs something
             if (string.IsNullOrEmpty(input))
             {
              Console.WriteLine("You cannot have a null or emplty value.");
@@ -72,11 +88,13 @@ namespace Samsock_TechnicalProject_3a
             }
             else
             {
+            //Display the desired message back to the user.
             Console.WriteLine("Hello " + input.ToString() + "!");
             Console.WriteLine("Press any key to exit the program...");
+             // Allows user to press any key to exit
             Console.ReadKey(true);
-            }
-                
-        }
-    }
-}
+            }//END ELSE
+
+        }// END provide_name
+    }// END CLASS
+} //END NAMESPACE
